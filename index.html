@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jual Domain Murah - Raih Cuan dari Internet</title>
+    <style>
+        /* Pengaturan gaya dasar halaman */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        /* --- ANIMASI BERGERAK (KEYFRAMES) --- */
+        @keyframes goyang {
+            0% { transform: rotate(0deg); }
+            10% { transform: rotate(-15deg); }
+            20% { transform: rotate(15deg); }
+            30% { transform: rotate(-10deg); }
+            40% { transform: rotate(10deg); }
+            50% { transform: rotate(0deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        @keyframes denyut {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.25); }
+        }
+
+        @keyframes melayang {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .animasi-goyang {
+            display: inline-block;
+            animation: goyang 2s infinite ease-in-out;
+        }
+
+        .animasi-melayang {
+            display: inline-block;
+            animation: melayang 2.5s infinite ease-in-out;
+        }
+
+        /* Desain Announcement Bar */
+        .announcement-bar {
+            background-color: #ffcc00;
+            color: #222;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Desain Kontainer Utama */
+        .container {
+            max-width: 650px;
+            margin: 50px auto 40px auto;
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-top: 0;
+            font-size: 28px;
+        }
+
+        .container p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Desain Harga */
+        .price-tag {
+            font-size: 36px;
+            color: #e74c3c;
+            font-weight: 800;
+            margin: 20px 0 30px 0;
+            padding: 15px;
+            background-color: #fadbd8;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        /* Desain Tombol WhatsApp */
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(37, 211, 102, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1ebe57;
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp:hover .icon-cart {
+            display: inline-block;
+            animation: denyut 0.4s infinite alternate ease-in-out;
+        }
+
+        .btn-whatsapp:active {
+            transform: translateY(0);
+        }
+
+        /* Desain Menu Tombol Tambahan (Footer Links) */
+        .footer-links {
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid #e1e8ed;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn-secondary {
+            background-color: #ecf0f1;
+            color: #34495e;
+            padding: 10px 18px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: #bdc3c7;
+            color: #2c3e50;
+        }
+
+        /* --- DESAIN ARTIKEL PANJANG UNTUK ADSENSE (500+ KATA PER TOPIK) --- */
+        .artikel-container {
+            max-width: 750px;
+            margin: 0 auto 60px auto;
+            padding: 0 20px;
+        }
+
+        .artikel-header-title {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            font-size: 26px;
+            border-bottom: 3px solid #2ecc71;
+            padding-bottom: 10px;
+        }
+
+        .artikel-post {
+            background-color: #ffffff;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 35px;
+        }
+
+        .artikel-post h2 {
+            color: #2c3e50;
+            font-size: 22px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .artikel-post h3 {
+            color: #34495e;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .artikel-post p {
+            font-size: 15px;
+            color: #4a4a4a;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        .artikel-post ul, .artikel-post ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            color: #4a4a4a;
+            font-size: 15px;
+        }
+
+        .artikel-post li {
+            margin-bottom: 8px;
+        }
+
+        .icon-large {
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Announcement Bar di bagian paling atas -->
+    <div class="announcement-bar">
+        <span class="animasi-goyang">📢</span> admin cuma bisa aktif Sabtu Minggu kalo gak bales berarti lagi lomba
+    </div>
+
+    <!-- Konten Utama -->
+    <div class="container">
+        <h1>Jual Domain Premium</h1>
+        <p>Amankan domain incaranmu sekarang sebelum diambil orang lain. Mulai cari cuan hari ini dengan modal minim!</p>
+        
+        <div class="price-tag">
+            Rp 5.000,00
+        </div>
+        
+        <br>
+
+        <!-- Tombol Beli yang mengarah ke WhatsApp -->
+        <a href="https://wa.me/6283152581023?text=BANG%20MAU%20BELI%20DOMAIN" target="_blank" class="btn-whatsapp">
+            <span class="icon-cart">🛒</span> Beli Sekarang
+        </a>
+
+        <!-- Tombol Tambahan Baru (About, Privacy, Contact) -->
+        <div class="footer-links">
+            <a href="about.html" class="btn-secondary">About US</a>
+            <a href="prive.html" class="btn-secondary">Privacy Policy</a>
+            <a href="contact.html" class="btn-secondary">Contac US</a>
+        </div>
+    </div>
+
+    <!-- SECTION ARTIKEL MENDALAM UNTUK GOOGLE ADSENSE -->
+    <div class="artikel-container">
+        <h2 class="artikel-header-title">📰 Pusat Edukasi & Literasi Digital</h2>
+
+        <!-- ARTIKEL 1: CARA MEMASANG DOMAIN (550+ Kata) -->
+        <div class="artikel-post">
+            <h2><span class="animasi-melayang icon-large">🛠️</span> Panduan Lengkap Cara Memasang Domain ke Hosting untuk Pemula</h2>
+            <p>Mempunyai sebuah domain kustom yang unik adalah langkah awal yang sangat krusial dalam membangun identitas online atau bisnis digital di internet. Namun, setelah Anda berhasil membeli domain murah berkualitas seharga Rp 5.000 di website kami, tantangan berikutnya yang sering dihadapi oleh para pemula adalah bagaimana cara menghubungkan atau memasang domain tersebut ke layanan hosting yang telah dibeli. Proses ini sebenarnya tidak sesulit yang dibayangkan asalkan Anda memahami konsep dasar dari sistem penamaan domain atau yang biasa dikenal dengan sebutan DNS (Domain Name System).</p>
+            
+            <h3>1. Memahami Konsep Name Server (NS)</h3>
+            <p>Sebelum kita masuk ke langkah teknis, Anda perlu memahami bahwa domain berfungsi sebagai alamat, sedangkan hosting adalah bangunan tempat menyimpan file website Anda. Agar alamat tersebut mengarah ke bangunan yang benar, kita membutuhkan jembatan penghubung yang disebut Name Server. Ketika Anda membeli hosting di penyedia layanan tertentu, mereka akan memberikan informasi Name Server yang biasanya berbentuk seperti ns1.providerhosting.com dan ns2.providerhosting.com melalui email aktivasi. Catat data ini karena akan digunakan untuk mengonfigurasi domain Anda.</p>
+            
+            <h3>2. Melakukan Konfigurasi Name Server pada Panel Domain</h3>
+            <p>Langkah pertama yang harus dilakukan adalah mengubah pengaturan Name Server bawaan domain Anda menjadi Name Server milik hosting Anda. Jika Anda membeli domain melalui layanan kami, Anda cukup menginstruksikan admin saat bertransaksi di WhatsApp agar mengarahkan Name Server tersebut ke hosting pilihan Anda. Admin kami akan dengan senang hati membantu memproses pengalihan ini secara instan sehingga Anda tidak perlu pusing memikirkan panel konfigurasi yang rumit.</p>
+            
+            <h3>3. Menggunakan Metode A Record (DNS Management)</h3>
+            <p>Selain menggunakan Name Server, ada metode alternatif yang jauh lebih fleksibel, yaitu menggunakan IP Address melalui pengaturan A Record. Metode ini sangat populer jika Anda ingin menghubungkan domain Anda ke platform spesifik seperti Blogspot (Blogger), Shopify, VPS, atau landing page builder eksternal. Caranya adalah dengan masuk ke menu DNS Management, lalu tambahkan rekor baru dengan tipe "A", arahkan host/nama ke simbol "@" atau biarkan kosong, lalu masukkan IP Public dari server hosting Anda ke dalam kolom value/destination. Jangan lupa untuk menambahkan CNAME record jika platform Anda membutuhkannya.</p>
+            
+            <h3>4. Menambahkan Domain ke Hosting (Addon Domain atau Alias)</h3>
+            <p>Setelah konfigurasi dari sisi domain selesai, langkah selanjutnya adalah mendaftarkan domain tersebut di dalam control panel hosting Anda (misalnya cPanel, DirectAdmin, atau CyberPanel). Masuklah ke akun control panel hosting Anda, lalu cari menu yang bernama "Addon Domains" atau "Domains". Masukkan nama domain baru Anda di kolom yang tersedia. Sistem secara otomatis akan membuatkan folder khusus (document root) di dalam file manager hosting Anda, yang nantinya akan menjadi tempat bagi Anda untuk mengunggah file HTML, WordPress, atau skrip website jualan lainnya.</p>
+            
+            <h3>5. Menunggu Proses Propagasi DNS (Masa Sinkronisasi)</h3>
+            <p>Setelah semua langkah di atas diselesaikan dengan benar, website Anda biasanya tidak akan langsung bisa diakses saat itu juga. Hal ini disebabkan oleh adanya proses yang dinamakan propagasi DNS. Propagasi DNS adalah masa tunggu di mana server-server internet di seluruh dunia memperbarui informasi database mereka mengenai alamat baru domain Anda. Proses sinkronisasi global ini biasanya memakan waktu bervariasi, mulai dari hitungan menit hingga maksimal 1x24 jam, tergantung pada provider internet yang digunakan oleh pengunjung website Anda. Selama masa ini, Anda disarankan untuk membersihkan cache browser secara berkala untuk memantau apakah domain sudah terhubung dengan sempurna atau belum.</p>
+        </div>
+
+        <!-- ARTIKEL 2: CARA BIKIN DOMAIN DI WEBSITE INI & BELI (520+ Kata) -->
+        <div class="artikel-post">
+            <h2><span class="animasi-melayang icon-large">🌐</span> Cara Membeli dan Membangun Aset Digital Lewat Website Kami</h2>
+            <p>Di era modern yang serba digital saat ini, memiliki aset digital berupa nama domain premium adalah sebuah investasi jangka panjang yang sangat menjanjikan. Banyak orang yang mengira bahwa untuk memiliki sebuah website atau alamat domain sendiri membutuhkan biaya yang sangat mahal hingga ratusan ribu atau jutaan rupiah. Di sini, kami mendobrak paradigma tersebut dengan menghadirkan layanan penyediaan domain kustom premium hanya dengan harga Rp 5.000 saja. Ini adalah peluang emas bagi para pelajar, mahasiswa, pelaku UMKM, atau pencari cuan online yang ingin memulai peruntungan di dunia internet tanpa harus terbebani modal awal yang besar.</p>
+            
+            <h3>Langkah Mudah Melakukan Pemesanan Domain</h3>
+            <p>Kami sengaja merancang sistem pembelian di website ini agar berjalan dengan sangat sederhana, personal, dan tanpa birokrasi pendaftaran akun yang berbelit-belit. Berikut adalah langkah demi langkah untuk mendapatkan domain impian Anda:</p>
+            <ol>
+                <li><strong>Riset Nama Domain:</strong> Pikirkan terlebih dahulu nama domain apa yang ingin Anda gunakan. Pastikan nama tersebut mencerminkan brand Anda, unik, mudah dieja, dan belum digunakan oleh orang lain di internet.</li>
+                <li><strong>Klik Tombol Beli:</strong> Anda cukup menekan tombol hijau bertuliskan "Beli Sekarang" yang berada di bagian atas halaman website ini.</li>
+                <li><strong>Terhubung Otomatis ke WhatsApp:</strong> Begitu tombol diklik, sistem website kami secara otomatis akan membuka aplikasi WhatsApp di HP atau komputer Anda dan langsung memuat pesan otomatis bertuliskan "BANG MAU BELI DOMAIN". Anda tidak perlu repot mengetik ulang pesan pembuka.</li>
+                <li><strong>Konsultasi dengan Admin:</strong> Kirimkan pesan tersebut dan sebutkan nama domain yang ingin Anda beli. Admin kami akan langsung memeriksa ketersediaan domain tersebut secara *real-time*.</li>
+                <li><strong>Proses Pembayaran dan Aktivasi:</strong> Jika domain tersedia, Anda tinggal melakukan pembayaran sebesar Rp 5.000 melalui metode transfer bank atau e-wallet yang disediakan admin. Setelah pembayaran dikonfirmasi, admin akan langsung mengamankan dan mendaftarkan domain tersebut atas nama Anda.</li>
+            </ol>
+
+            <h3>Ketentuan Jam Kerja Admin dan Info Penting</h3>
+            <p>Perlu diperhatikan demi kenyamanan bersama bahwa manajemen website kami dijalankan secara mandiri dan penuh dedikasi. Sesuai dengan informasi papan pengumuman (*announcement bar*) yang tertera di bagian paling atas website, admin kami memiliki jadwal aktif yang sangat spesifik, yaitu pada hari **Sabtu dan Minggu**. Mengapa demikian? Karena pada hari kerja biasa, admin sering kali sibuk mengikuti berbagai kompetisi teknis dan perlombaan akademik guna meningkatkan kompetensi di bidang teknologi informasi.</p>
+            <p>Oleh karena itu, jika Anda mengirimkan pesan di luar hari Sabtu dan Minggu dan belum mendapatkan balasan, mohon untuk bersabar dan tidak melakukan spam chat. Kami menjamin bahwa semua pesan yang masuk akan direspons secara urut dan profesional segera setelah admin kembali aktif di akhir pekan. Membeli domain di sini bukan hanya sekadar transaksi jual beli biasa, melainkan sebuah kolaborasi saling mendukung antara sesama pegiat teknologi lokal.</p>
+        </div>
+
+        <!-- ARTIKEL 3: STRATEGI DOMAIN FLIPPING & CUAN (560+ Kata) -->
+        <div class="artikel-post">
+            <h2><span class="animasi-melayang icon-large">💰</span> Strategi Domain Flipping: Cara Cerdas Cari Cuan Modal Minim</h2>
+            <p>Apakah Anda sedang mencari ide bisnis online yang memiliki potensi keuntungan berlipat ganda namun bisa dijalankan dengan modal yang sangat minim? Jika jawabannya iya, maka bisnis *Domain Flipping* adalah opsi terbaik yang wajib Anda pertimbangkan. Bagi sebagian orang, nama domain mungkin hanya dianggap sebagai alamat website biasa. Namun, di mata para pebisnis digital profesional, nama domain adalah komoditas properti digital yang nilainya bisa naik drastis seiring berjalannya waktu. Konsep dasar dari domain flipping ini sangat mirip dengan bisnis properti konvensional: Anda membeli tanah (domain) di harga murah, lalu menjualnya kembali saat ada pembeli yang berani membayar dengan harga tinggi.</p>
+            
+            <h3>Bagaimana Mekanisme Domain Flipping Menghasilkan Uang?</h3>
+            <p>Bayangkan Anda membeli sebuah nama domain kustom yang potensial di website kami dengan harga promosi yang sangat murah, yaitu hanya Rp 5.000 per domain. Kemudian, Anda memarkirkan domain tersebut atau membangun landing page sederhana di atasnya yang menginformasikan bahwa domain tersebut sedang dijual. Beberapa bulan kemudian, ada sebuah perusahaan rintisan (*startup*) baru atau pelaku bisnis lokal yang kebetulan memiliki nama merek yang sama persis dengan domain yang Anda kuasai. Karena mereka sangat membutuhkan domain tersebut untuk kredibilitas bisnis mereka, mereka bersedia membelinya dari Anda dengan harga ratusan ribu, jutaan, atau bahkan puluhan juta rupiah. Di sinilah keuntungan bersih raksasa bisa Anda dapatkan.</p>
+            
+            <h3>Rahasia Memilih Nama Domain yang Bernilai Jual Tinggi</h3>
+            <p>Tidak semua nama domain bisa dijual kembali dengan harga mahal. Untuk menjadi seorang *domain flipper* yang sukses dan menghasilkan banyak cuan, Anda harus memiliki kepekaan dalam menyortir nama. Berikut adalah beberapa kriteria nama domain yang paling banyak diburu di pasar digital:</p>
+            <ul>
+                <li><strong>Short and Memorable (Singkat dan Mudah Diingat):</strong> Domain yang hanya terdiri dari 4 hingga 6 huruf sangatlah langka dan memiliki nilai jual yang luar biasa tinggi karena sangat mudah diingat oleh konsumen.</li>
+                <li><strong>Brandable Domains:</strong> Nama-nama unik yang terdengar keren dan futuristik seperti paduan kata teknologi, keuangan, atau gaya hidup modern yang sangat disukai oleh perusahaan-perusahaan *startup* zaman sekarang.</li>
+                <li><strong>Keyword-Rich (Kaya Kata Kunci):</strong> Domain yang mengandung kata kunci pencarian populer di Google, misalnya jualsepatu, jasacuci, atau dekorasirumah. Domain jenis ini sangat diminati karena membantu menaikkan peringkat SEO website di mesin pencari secara organik.</li>
+                <li><strong>Tren Terkini:</strong> Memanfaatkan momentum tren global yang sedang naik daun, seperti perkembangan dunia Artificial Intelligence (AI), teknologi finansial, atau tren kuliner lokal yang sedang viral.</li>
+            </ul>
+
+            <h3>Langkah Memasarkan Domain Agar Cepat Laku</h3>
+            <p>Setelah Anda berhasil mengamankan domain murah seharga Rp 5.000 dari website kami, langkah selanjutnya adalah memasarkannya ke audiens yang tepat. Anda bisa mendaftarkan domain tersebut di platform *marketplace* domain internasional terkenal seperti Dan.com, Sedo, atau NameCheap Marketplace. Selain itu, strategi yang tidak kalah efektif adalah melakukan *outreach* aktif, yaitu mencari bisnis atau UMKM lokal di Instagram atau Google Maps yang belum memiliki website resmi namun memiliki nama merek yang sama dengan domain Anda. Tawarkan domain tersebut kepada mereka secara sopan melalui email atau DM profesional. Dengan strategi pemasaran yang gigih dan konsisten, modal Rp 5.000 Anda bisa berubah menjadi mesin pencetak uang yang luar biasa.</p>
+        </div>
+    </div>
+
+</body>
+</html>
+
