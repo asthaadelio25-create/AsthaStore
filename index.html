@@ -14,6 +14,42 @@
             color: #333;
         }
 
+        /* --- ANIMASI BERGERAK (KEYFRAMES) --- */
+        /* Animasi Goyang untuk Megaphone */
+        @keyframes goyang {
+            0% { transform: rotate(0deg); }
+            10% { transform: rotate(-15deg); }
+            20% { transform: rotate(15deg); }
+            30% { transform: rotate(-10deg); }
+            40% { transform: rotate(10deg); }
+            50% { transform: rotate(0deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        /* Animasi Denyut untuk Keranjang Belanja */
+        @keyframes denyut {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.25); }
+        }
+
+        /* Animasi Melayang untuk Ikon Artikel */
+        @keyframes melayang {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Class untuk menerapkan animasi */
+        .animasi-goyang {
+            display: inline-block;
+            animation: goyang 2s infinite ease-in-out;
+        }
+
+        .animasi-melayang {
+            display: inline-block;
+            animation: melayang 2s infinite ease-in-out;
+        }
+
         /* Desain Announcement Bar */
         .announcement-bar {
             background-color: #ffcc00;
@@ -28,7 +64,7 @@
         /* Desain Kontainer Utama */
         .container {
             max-width: 600px;
-            margin: 60px auto;
+            margin: 60px auto 30px auto;
             background-color: #ffffff;
             padding: 40px 30px;
             border-radius: 12px;
@@ -80,6 +116,12 @@
             transform: translateY(-2px);
         }
 
+        /* Efek ikon keranjang berdenyut saat tombol di-hover */
+        .btn-whatsapp:hover .icon-cart {
+            display: inline-block;
+            animation: denyut 0.4s infinite alternate ease-in-out;
+        }
+
         .btn-whatsapp:active {
             transform: translateY(0);
         }
@@ -110,20 +152,72 @@
             background-color: #bdc3c7;
             color: #2c3e50;
         }
+
+        /* --- DESAIN SECTON ARTIKEL BARU (BUANYAK POL) --- */
+        .artikel-section {
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+            padding: 0 20px;
+        }
+
+        .artikel-title {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 24px;
+            position: relative;
+        }
+
+        .artikel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .artikel-card {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .artikel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .artikel-card h3 {
+            margin-top: 10px;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+
+        .artikel-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        .artikel-icon-box {
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
     <nav style="background: #eee; padding: 10px; margin-bottom: 20px;">
     <a href="index.html">Home</a> | 
-    <a href="about.html">About</a>| 
+    <a href="about.html">About</a> | 
     <a href="contact.html">Contact</a> | 
     <a href="prive.html">Privacy Policy</a>
     </nav>
-    
 
     <!-- Announcement Bar di bagian paling atas -->
     <div class="announcement-bar">
-        📢 admin cuma bisa aktif Sabtu Minggu kalo gak bales berarti lagi lomba
+        <span class="animasi-goyang">📢</span> admin cuma bisa aktif Sabtu Minggu kalo gak bales berarti lagi lomba
     </div>
 
     <!-- Konten Utama -->
@@ -139,7 +233,7 @@
 
         <!-- Tombol Beli yang mengarah ke WhatsApp -->
         <a href="https://wa.me/6283152581023?text=BANG%20MAU%20BELI%20DOMAIN" target="_blank" class="btn-whatsapp">
-            🛒 Beli Sekarang
+            <span class="icon-cart">🛒</span> Beli Sekarang
         </a>
 
         <!-- Tombol Tambahan Baru (About, Privacy, Contact) -->
@@ -150,6 +244,56 @@
         </div>
     </div>
 
+    <!-- SECTION ARTIKEL EDUKASI DOMAIN & HOSTING -->
+    <div class="artikel-section">
+        <h2 class="artikel-title">📚 Panduan & Tips Kelola Domain</h2>
+        
+        <div class="artikel-grid">
+            
+            <!-- Artikel 1 -->
+            <div class="artikel-card">
+                <div class="artikel-icon-box <span class='animasi-melayang'>🌐</span>">🌐</div>
+                <h3>Cara Bikin & Beli Domain di Sini</h3>
+                <p>Gampang pol! Kamu tinggal klik tombol "Beli Sekarang" di atas, lalu kamu akan langsung diarahkan ke WhatsApp admin. Sebutkan nama domain idamanmu, lakukan pembayaran Rp 5.000, dan admin akan langsung memprosesnya buat kamu.</p>
+            </div>
+
+            <!-- Artikel 2 -->
+            <div class="artikel-card">
+                <div class="artikel-icon-box"><span class="animasi-melayang">🛠️</span></div>
+                <h3>Cara Memasang Domain ke Hosting</h3>
+                <p>Setelah beli domain di sini, kamu harus mengarahkan Name Server (NS) atau DNS record (A Record) domain kamu ke IP Address hosting yang kamu gunakan melalui panel domain. Dengan begitu, website kamu bisa langsung online diakses publik.</p>
+            </div>
+
+            <!-- Artikel 3 -->
+            <div class="artikel-card">
+                <div class="artikel-icon-box"><span class="animasi-melayang">🚀</span></div>
+                <h3>Apa Itu Hosting & Kegunaannya?</h3>
+                <p>Kalau domain itu ibarat alamat rumah, nah hosting adalah tanah atau bangunan rumahnya. Hosting berfungsi sebagai tempat penyimpanan semua file website kamu, mulai dari gambar, kode HTML, database, hingga script jualanmu.</p>
+            </div>
+
+            <!-- Artikel 4 -->
+            <div class="artikel-card">
+                <div class="artikel-icon-box"><span class="animasi-melayang">💡</span></div>
+                <h3>Tips Pilih Nama Domain Biar Cuan</h3>
+                <p>Gunakan nama domain yang singkat, mudah dieja, dan gampang diingat orang. Hindari penggunaan angka atau tanda hubung (-) yang ribet. Nama domain yang berpotensi viral atau sesuai tren sangat cepat laku kalau dijual kembali!</p>
+            </div>
+
+            <!-- Artikel 5 -->
+            <div class="artikel-card">
+                <div class="artikel-icon-box"><span class="animasi-melayang">🔒</span></div>
+                <h3>Pentingnya Pasang SSL di Domain</h3>
+                <p>SSL bikin alamat website kamu berubah dari HTTP menjadi HTTPS (ada ikon gembok gembok aman). Ini penting banget biar website jualanmu dipercaya pembeli dan tidak diblokir oleh browser karena dianggap tidak aman.</p>
+            </div>
+
+            <!-- Artikel 6 -->
+            <div class="artikel-card">
+                <div class="artikel-icon-box"><span class="animasi-melayang">💰</span></div>
+                <h3>Cara Bisnis Jual Beli (Flipping) Domain</h3>
+                <p>Beli domain murah seharga Rp 5.000 di sini, lalu kamu bisa tawarkan lagi ke target pasar atau perusahaan dengan harga berkali-kali lipat lebih tinggi. Bisnis modal irit untung selangit ini biasa disebut Domain Flipping!</p>
+            </div>
+
+        </div>
+    </div>
+
 </body>
 </html>
-
